@@ -1,0 +1,482 @@
+.expenditure-history {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h2 {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  font-size: 28px;
+}
+
+.page-header p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c33;
+}
+
+/* Search Section */
+.expenditure-history .search-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.expenditure-history .search-section h3 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.expenditure-history .search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.expenditure-history .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.expenditure-history .form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.expenditure-history .form-group input,
+.expenditure-history .form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.expenditure-history .form-group input:focus,
+.expenditure-history .form-group select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.expenditure-history .search-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.expenditure-history .search-button,
+.expenditure-history .reset-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.expenditure-history .search-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.expenditure-history .search-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.expenditure-history .reset-button {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.expenditure-history .reset-button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.expenditure-history .search-button:disabled,
+.expenditure-history .reset-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Summary Section */
+.expenditure-history .summary-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.expenditure-history .summary-section h3 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.expenditure-history .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.expenditure-history .summary-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+.expenditure-history .summary-label {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.expenditure-history .summary-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Visualization Section */
+.expenditure-history .visualization-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.expenditure-history .visualization-section h3 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.expenditure-history .expense-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.expenditure-history .expense-type-card {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4CAF50;
+  transition: transform 0.2s;
+}
+
+.expenditure-history .expense-type-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.expenditure-history .expense-type-label {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.expenditure-history .expense-type-amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Results Section */
+.expenditure-history .results-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.expenditure-history .results-section h3 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.expenditure-history .table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.expenditure-history .results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.expenditure-history .results-table thead {
+  background-color: #f8f9fa;
+}
+
+.expenditure-history .results-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.expenditure-history .results-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  color: #333;
+}
+
+.expenditure-history .results-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.expenditure-history .no-data {
+  text-align: center;
+  color: #999;
+  padding: 40px !important;
+  font-style: italic;
+}
+
+.expenditure-history .expense-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.expenditure-history .amount-cell {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Load More Section */
+.expenditure-history .load-more-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.expenditure-history .load-more-button {
+  padding: 10px 32px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.expenditure-history .load-more-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.expenditure-history .load-more-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .expenditure-history {
+    padding: 12px;
+  }
+
+  .page-header h2 {
+    font-size: 20px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .filter-section,
+  .summary-section,
+  .results-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .filter-section h3,
+  .summary-section h3,
+  .results-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .expenditure-history .search-grid,
+  .expenditure-history .summary-grid,
+  .expenditure-history .expense-type-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 10px 8px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .expenditure-history .search-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .expenditure-history .search-button,
+  .expenditure-history .reset-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .summary-card {
+    padding: 15px;
+  }
+
+  .summary-label {
+    font-size: 12px;
+  }
+
+  .summary-value {
+    font-size: 20px;
+  }
+
+  .expenditure-history .table-container {
+    overflow-x: auto;
+    border-radius: 4px;
+  }
+
+  .expenditure-history .results-table {
+    font-size: 12px;
+    min-width: 800px;
+  }
+
+  .expenditure-history .results-table th,
+  .expenditure-history .results-table td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .action-button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+
+  .error-message,
+  .success-message {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .expenditure-history {
+    padding: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .filter-section,
+  .summary-section,
+  .results-section {
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .filter-section h3,
+  .summary-section h3,
+  .results-section h3 {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .expenditure-history .search-button,
+  .expenditure-history .reset-button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .summary-card {
+    padding: 12px;
+  }
+
+  .summary-value {
+    font-size: 18px;
+  }
+
+  .expenditure-history .results-table {
+    font-size: 11px;
+  }
+
+  .expenditure-history .results-table th,
+  .expenditure-history .results-table td {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .expenditure-history .search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expenditure-history .summary-grid,
+  .expenditure-history .expense-type-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

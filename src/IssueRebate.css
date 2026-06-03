@@ -1,0 +1,510 @@
+/* Issue Rebate Component Styles */
+
+.issue-rebate {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-header h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Search Section */
+.search-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.search-section h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.search-form {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+
+.search-form .form-group {
+  flex: 1;
+}
+
+.search-form .btn-find {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.search-form .btn-find:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.search-form .btn-find:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.readonly-input {
+  background-color: #f8f9fa !important;
+  color: #6c757d !important;
+  cursor: not-allowed !important;
+}
+
+/* Agreement Information */
+.agreement-info-section {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.agreement-info-section h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item label {
+  font-weight: 500;
+  color: #7f8c8d;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.info-item span {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Charges Summary */
+.charges-summary {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.charges-summary h4 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.charges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.charge-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.charge-item.highlight {
+  background: #e8f5e8;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #27ae60;
+  font-weight: 600;
+}
+
+.charge-item label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.charge-item span {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Rebate Section */
+.rebate-section {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.rebate-section h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 10px;
+}
+
+.rebate-form {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-preview {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-preview:hover:not(:disabled) {
+  background: #e67e22;
+}
+
+.btn-preview:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Calculation Preview */
+.calculation-preview {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.calculation-preview h4 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.calculation-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.calc-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.calc-item.highlight {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.calc-item.final {
+  background: #d4edda;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #27ae60;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.calc-item label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.calc-item span {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.btn-issue-rebate {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-issue-rebate:hover:not(:disabled) {
+  background: #229954;
+}
+
+.btn-issue-rebate:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #c3e6cb;
+}
+
+.warning-message {
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #ffeaa7;
+}
+
+.placeholder-message {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .issue-rebate {
+    padding: 12px;
+  }
+
+  .page-header h2 {
+    font-size: 20px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .search-section,
+  .info-section,
+  .rebate-section,
+  .calculation-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .search-section h3,
+  .info-section h3,
+  .rebate-section h3,
+  .calculation-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .search-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 8px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+  .search-button,
+  .submit-button,
+  .cancel-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .info-grid,
+  .charges-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .info-item label {
+    font-size: 12px;
+  }
+
+  .info-item span {
+    font-size: 14px;
+  }
+  
+  .form-actions {
+    justify-content: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .calc-item {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  .calc-label {
+    font-size: 13px;
+  }
+
+  .calc-value {
+    font-size: 16px;
+  }
+
+  .error-message,
+  .success-message {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .issue-rebate {
+    padding: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .search-section,
+  .info-section,
+  .rebate-section,
+  .calculation-section {
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .search-section h3,
+  .info-section h3,
+  .rebate-section h3,
+  .calculation-section h3 {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .search-button,
+  .submit-button,
+  .cancel-button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .calc-value {
+    font-size: 14px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .info-grid,
+  .charges-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

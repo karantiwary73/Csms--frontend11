@@ -1,0 +1,535 @@
+/* Rebate History Component Styles */
+
+.rebate-history {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.page-header h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.page-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Filters Section */
+.filters-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.filters-section h3 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.filters-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn-search {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-search:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.btn-search:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-clear {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-clear:hover {
+  background: #7f8c8d;
+}
+
+/* Summary Section */
+.rebate-history .summary-section {
+  margin-bottom: 20px;
+}
+
+.rebate-history .summary-card {
+  background: #212529 !important;
+  border: 1px solid #495057;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.rebate-history .summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rebate-history .summary-item label {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.rebate-history .summary-value {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Rebates Section */
+.rebates-section {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.rebates-section h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.rebates-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rebates-table th,
+.rebates-table td {
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.rebates-table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #2c3e50;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rebates-table tr:hover {
+  background: #f8f9fa;
+}
+
+.rebates-table .rebate-amount {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.rebates-table .net-payable {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* Status and Type Badges */
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.rebate-type {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.rebate-type.amount {
+  background: #cce5ff;
+  color: #0056b3;
+}
+
+.rebate-type.rate {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Action Buttons */
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #c82333;
+}
+
+.btn-cancel:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.cancelled-info {
+  font-size: 12px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.pagination-info {
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-page {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn-page:hover:not(:disabled) {
+  background: #2980b9;
+}
+
+.btn-page:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.page-info {
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Messages */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 12px;
+  border-radius: 5px;
+  margin: 15px 0;
+  border: 1px solid #c3e6cb;
+}
+
+.no-data-message {
+  text-align: center;
+  padding: 40px;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .rebate-history {
+    padding: 12px;
+  }
+
+  .page-header h2 {
+    font-size: 20px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .filter-section,
+  .summary-section,
+  .results-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .filter-section h3,
+  .summary-section h3,
+  .results-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .filter-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 10px 8px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .filter-actions {
+    justify-content: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-actions button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+  
+  .rebate-history .summary-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .summary-item {
+    padding: 15px;
+  }
+
+  .summary-label {
+    font-size: 12px;
+  }
+
+  .summary-value {
+    font-size: 20px;
+  }
+
+  .table-container {
+    border-radius: 4px;
+  }
+  
+  .rebates-table {
+    font-size: 12px;
+    min-width: 800px;
+  }
+  
+  .rebates-table th,
+  .rebates-table td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  .action-button {
+    padding: 5px 8px;
+    font-size: 11px;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .pagination-controls {
+    order: -1;
+    justify-content: center;
+  }
+
+  .pagination-info {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .error-message,
+  .success-message {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .rebate-history {
+    padding: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .filter-section,
+  .summary-section,
+  .results-section {
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .filter-section h3,
+  .summary-section h3,
+  .results-section h3 {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .filter-actions button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .summary-item {
+    padding: 12px;
+  }
+
+  .summary-value {
+    font-size: 18px;
+  }
+
+  .rebates-table {
+    font-size: 11px;
+  }
+
+  .rebates-table th,
+  .rebates-table td {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+
+  .pagination-info {
+    font-size: 12px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .filter-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rebate-history .summary-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,307 @@
+.system-settings {
+  max-width: 800px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.settings-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #000000;
+}
+
+.tab-btn {
+  padding: 15px 25px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-right: 1px solid #000000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.tab-btn.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.settings-content {
+  margin-bottom: 40px;
+}
+
+.settings-section {
+  border: 2px solid #000000;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.settings-section h3 {
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.setting-item input,
+.setting-item select {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.setting-item input:focus,
+.setting-item select:focus {
+  outline: none;
+  border: 2px solid #000000;
+}
+
+.setting-item input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+.setting-item input[type="number"] {
+  max-width: 150px;
+}
+
+.settings-section button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.settings-section button:hover {
+  background-color: #333333;
+}
+
+.system-info {
+  border: 2px solid #000000;
+  padding: 30px;
+  background-color: #f0f0f0;
+}
+
+.system-info h3 {
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.info-item strong {
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .system-settings {
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  .settings-tabs {
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-bottom: none;
+    border: 1px solid #000000;
+  }
+
+  .tab-btn {
+    padding: 12px 20px;
+    border-right: none;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .tab-btn:last-child {
+    border-bottom: none;
+  }
+
+  .settings-content {
+    margin-bottom: 30px;
+  }
+
+  .settings-section {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .settings-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .setting-item {
+    margin-bottom: 15px;
+  }
+
+  .setting-item label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .setting-item input,
+  .setting-item select {
+    max-width: 100%;
+    padding: 10px 8px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .setting-item input[type="number"] {
+    max-width: 100%;
+  }
+
+  .setting-item input[type="checkbox"] {
+    min-height: auto;
+    width: 20px;
+    height: 20px;
+  }
+
+  .settings-section button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+    margin-top: 15px;
+  }
+
+  .system-info {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .system-info h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .info-item {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .system-settings {
+    padding: 10px;
+  }
+
+  .section-header h2 {
+    font-size: 18px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .settings-section {
+    padding: 12px;
+  }
+
+  .settings-section h3 {
+    font-size: 14px;
+  }
+
+  .setting-item label {
+    font-size: 12px;
+  }
+
+  .setting-item input,
+  .setting-item select {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .settings-section button {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .system-info {
+    padding: 12px;
+  }
+
+  .system-info h3 {
+    font-size: 14px;
+  }
+
+  .info-item {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .system-settings {
+    max-width: 100%;
+  }
+
+  .settings-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

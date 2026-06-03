@@ -1,0 +1,503 @@
+.reservation-overview-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.reservation-overview-container h1 {
+  color: #000;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  border-left: 4px solid #dc3545;
+}
+
+.loading-message {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.loading-indicator {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.end-message {
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #f0f0f0;
+  margin: 20px;
+  border-radius: 4px;
+  border-left: 4px solid #ffffff;
+}
+
+.no-data-message {
+  background-color: #e2e3e5;
+  color: #383d41;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Units Grid Layout - 2 columns */
+.units-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.unit-section {
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  max-height: 800px;
+}
+
+.unit-header {
+  background: #000;
+  color: white;
+  padding: 15px 20px;
+  border-bottom: 2px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.unit-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Unit Summary - STICKY */
+.unit-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 15px;
+  background-color: #000;
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 60px;
+  z-index: 9;
+  flex-shrink: 0;
+}
+
+.summary-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.summary-label {
+  color: #ccc;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.summary-value {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Recent Reservations - SCROLLABLE */
+.recent-reservations {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.table-scroll-container {
+  overflow-y: auto;
+  flex: 1;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  min-height: 400px;
+  max-height: 600px;
+}
+
+.recent-reservations h3 {
+  color: #ffffff;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.overview-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.overview-table thead {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.overview-table th {
+  padding: 10px;
+  text-align: left;
+  font-weight: 500;
+  color: #000;
+  border-bottom: 1px solid #e0e0e0;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.overview-table td {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.overview-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.overview-table .no-data {
+  text-align: center;
+  color: #999;
+  padding: 20px 10px;
+}
+
+@media (max-width: 1024px) {
+  .units-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unit-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Table Header Controls */
+.table-header-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.column-manager-btn {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+  border: 1px solid #333333;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: auto;
+  width: auto;
+}
+
+.column-manager-btn:hover {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  border-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Column Manager Panel - Based on DataTable.css */
+.column-manager-panel {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border: 1px solid #333333;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 100;
+  min-height: 200px;
+  width: 100%;
+  overflow: visible;
+}
+
+.column-manager-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #333333;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border-radius: 8px 8px 0 0;
+}
+
+.column-manager-header h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-close {
+  background: #ff4757;
+  color: #ffffff;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.btn-close:hover {
+  background: #ff3742;
+}
+
+.column-list {
+  padding: 12px 16px;
+  max-height: 250px;
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.column-item {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 15px 12px;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.column-item.visible {
+  background: linear-gradient(135deg, #1a4d3a 0%, #2d5a47 100%);
+  border: 1px solid #28a745;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.15);
+}
+
+.column-item.hidden {
+  background: linear-gradient(135deg, #4d1a1a 0%, #5a2d2d 100%);
+  border: 1px solid #dc3545;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.15);
+}
+
+.column-item.required {
+  background: linear-gradient(135deg, #1a2d4d 0%, #2d3f5a 100%);
+  border: 1px solid #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+.column-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 0;
+  width: 100%;
+  user-select: none;
+  min-height: 100%;
+}
+
+.column-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ffffff;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.column-checkbox input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.column-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ffffff;
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+}
+
+.required-indicator {
+  font-size: 10px;
+}
+
+.column-manager-actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #333333;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border-radius: 0 0 8px 8px;
+  justify-content: flex-end;
+}
+
+.btn-apply, .btn-save-default, .btn-reset {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #333333;
+}
+
+.btn-apply, .btn-save-default {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #ffffff;
+}
+
+.btn-apply:hover, .btn-save-default:hover {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  border-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.btn-reset {
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-reset:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-color: #ffffff;
+}
+
+/* Responsive grid for column list */
+@media (max-width: 600px) {
+  .column-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .column-item {
+    min-height: 50px;
+    padding: 12px 10px;
+  }
+  
+  .column-label {
+    font-size: 12px;
+  }
+  
+  .column-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .columns-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .columns-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .columns-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .column-manager-modal {
+    width: 95%;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .columns-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-overview-container {
+    padding: 10px;
+  }
+
+  .units-grid {
+    gap: 15px;
+  }
+
+  .overview-table {
+    font-size: 12px;
+  }
+
+  .overview-table th,
+  .overview-table td {
+    padding: 8px;
+  }
+
+  .summary-label {
+    font-size: 10px;
+  }
+
+  .summary-value {
+    font-size: 16px;
+  }
+}

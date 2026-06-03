@@ -1,0 +1,236 @@
+.new-money-transfer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.new-money-transfer .page-header {
+  margin-bottom: 30px;
+}
+
+.new-money-transfer .page-header h2 {
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  font-size: 28px;
+}
+
+.new-money-transfer .page-header p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.new-money-transfer .error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #c33;
+}
+
+.new-money-transfer .success-message {
+  background-color: #efe;
+  color: #2a7;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #2a7;
+}
+
+.new-money-transfer .form-section {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 24px;
+}
+
+.new-money-transfer .form-section h3 {
+  margin: 0 0 20px 0;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.new-money-transfer .form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.new-money-transfer .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-money-transfer .form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.new-money-transfer .form-group input,
+.new-money-transfer .form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.new-money-transfer .form-group input:focus,
+.new-money-transfer .form-group select:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.new-money-transfer .form-group small {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.new-money-transfer .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 0;
+}
+
+.new-money-transfer .btn-create {
+  padding: 12px 32px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.new-money-transfer .btn-create:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.new-money-transfer .btn-create:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .new-money-transfer {
+    padding: 12px;
+  }
+
+  .page-header h2 {
+    font-size: 20px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .form-section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .form-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .new-money-transfer .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px 8px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+  .new-money-transfer .form-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .new-money-transfer .btn-create,
+  .new-money-transfer .btn-cancel {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .error-message,
+  .success-message {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .new-money-transfer {
+    padding: 10px;
+  }
+
+  .page-header h2 {
+    font-size: 18px;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+  .form-section {
+    padding: 12px;
+    border-radius: 4px;
+  }
+
+  .form-section h3 {
+    font-size: 14px;
+  }
+
+  .form-group label {
+    font-size: 12px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .new-money-transfer .btn-create,
+  .new-money-transfer .btn-cancel {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .new-money-transfer .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
